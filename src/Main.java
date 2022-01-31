@@ -5,11 +5,11 @@ public class Main {
         Budynek budynek = new Dom();
         //3b
         dom.kolorDomu(KolorEnum.NIEBIESKI);
-        dom.liczbaOkien(5);
-        dom.liczbaMieszkancow(10);
+        dom.liczbaOkien(4);
+        dom.liczbaMieszkancow(8);
         budynek.kolorDomu(KolorEnum.ZIELONY);
-        budynek.liczbaOkien(10);
-        budynek.liczbaMieszkancow(20);
+        budynek.liczbaOkien(8);
+        budynek.liczbaMieszkancow(10);
         //3c
         System.out.println(dom.toString());
         System.out.println(budynek.toString());
