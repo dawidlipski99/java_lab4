@@ -1,20 +1,57 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // Zadanie 3a
-        Dom dom = new Dom();
-        Budynek budynek = new Dom();
-        //3b
-        dom.kolorDomu(KolorEnum.NIEBIESKI);
-        dom.liczbaOkien(5);
-        dom.liczbaMieszkancow(10);
-        budynek.kolorDomu(KolorEnum.ZIELONY);
-        budynek.liczbaOkien(10);
-        budynek.liczbaMieszkancow(20);
-        //3c
-        System.out.println(dom.toString());
-        System.out.println(budynek.toString());
-        //3d
-        System.out.println(dom.iloscOkienIMieszkancow(dom.getOkna(), dom.getMieszkancy()));
+        // Zadanie 1
+        int[] tab = new int[] { 0, 0, 0, 0, 0, 0 };
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            String input = scanner.next();
 
+            try {
+                int indeks = Integer.parseInt(input);
+                System.out.println("OK");
+                if (indeks <= 0 || indeks > 99999)
+                    throw new Exception();
+                System.out.println("OK1");
+
+                for (int i = 0; i < input.length(); i++)
+                    tab[i] = Integer.parseInt(input.substring(i, i + 1));
+                break;
+            } catch (Exception e) {
+                System.out.println("Niepoprawny indeks");
+                continue;
+            } finally {
+                System.out.println("Finally");
+            }
+        }
+        // Zadanie 2
+        //a
+        String test = null;
+        try {
+            char[] letters = test.toCharArray();
+        } catch (NullPointerException e) {
+            System.out.println("Null pointer");
+        }
+        //b
+        int a = 0;
+        int b = 2;
+        try {
+            int c = b / a;
+        } catch (ArithmeticException e) {
+            System.out.println("Arithmetic");
+        }
+        // Zadanie 3
+        int d = 0;
+        int e = 10;
+        try {
+            int f = e / d;
+        } catch (ArithmeticException ex) {
+            System.out.println("Catch 1");
+        } catch (Exception ex) {
+            System.out.println("Catch 2");
+        } finally {
+            System.out.println("Finally");
+        }
     }
 }
