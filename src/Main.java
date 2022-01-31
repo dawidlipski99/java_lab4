@@ -10,10 +10,10 @@ public class Main {
 
             try {
                 int indeks = Integer.parseInt(input);
-                System.out.println("OK");
+                System.out.println("OK1");
                 if (indeks <= 0 || indeks > 99999)
                     throw new Exception();
-                System.out.println("OK1");
+                System.out.println("OK2");
 
                 for (int i = 0; i < input.length(); i++)
                     tab[i] = Integer.parseInt(input.substring(i, i + 1));
